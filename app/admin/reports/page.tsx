@@ -26,20 +26,27 @@ useEffect(()=>{
 getMessages()
 },[])
   return (
-      <div>
-        <div>
-            <h1>Admin report page</h1>
-            
+    <div>
+      <h1>Admin report page</h1>
+      <table> 
+      <tr>
+            <th>Message ID:</th>
+            <th>Created at:</th>
+            <th>Message:</th>
+            <th>Sent by:</th>
+        </tr>  
             {messages.map((message, index) => (
-                    <li key={index}>
-                        <p>Message ID: {message.id}</p>
-                        <p>Created at: {message.created_at}</p>
-                        <p>Message: {message.text}</p>
-                        <p>Send by: {message.send_by}</p>
-                    </li>
+                    <tr
+                    className='odd:bg-white even:bg-slate-50'
+                     key={index}>
+                        <td> {message.id}</td>
+                        <td> {message.created_at}</td>
+                        <td> {message.text}</td>
+                        <td> {message.send_by}</td>
+                    </tr>
             ))}
-        </div>
         <GenerateDoc messages={messages}/>
+      </table>
       </div>
         )
   }

@@ -29,7 +29,7 @@ const Header = () => {
         <div className="flex items-center gap-2 hover:bg-[#06529a] p-3 rounded-full">
         
           <p className="text-[16px] font-semibold">
-            <Link href="./admin">Admin</Link>
+            <Link href="./authentication">Admin</Link>
             </p>
         </div>
         <div className="flex items-center gap-2 hover:bg-[#06529a] p-3 rounded-full whitespace-nowrap">

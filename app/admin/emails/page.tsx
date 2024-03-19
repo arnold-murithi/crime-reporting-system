@@ -24,16 +24,16 @@ const EmailsPage = () => {
       console.log(data)
     }
   return (
-    <div>
+    <div className='flex'>
       <div className="w-100 border h-20">
        <div className="flex items-center justify-center pt-5 font-bold">
         <h1 className='text-2xl'>Save files and Send Emails</h1>
         </div>
     </div>
-      <div>
+      <div className=''>
       <FileSection/>
       </div>
-   <div className="ml-5 mr-4  ">
+   <section className="ml-5 mr-4  ">
    <div className="w-2/5 float-right bg-slate-100 mr-6 flex items-center ml-7 pb-4">
    <form
     className='flex flex-col mt-10 items-center  min-h-full min-w-40 float-end mr-10 ml-8 '
@@ -56,7 +56,7 @@ const EmailsPage = () => {
       type='submit'>Send email</button>
     </form>
    </div>
-   </div>
+   </section>
     </div>
   )
 }

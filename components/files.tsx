@@ -27,7 +27,7 @@ const FileSection = () => {
         ])
       setTask("")
     }
-
+    //text-sm font-medium text-slate-900
     
   return (
     <div>
@@ -43,7 +43,19 @@ const FileSection = () => {
     </div>
     <ul className='m-3'>
         {todoList.map(todo=>(
-          <li key={todo.id}>{todo.task}</li>
+          <li 
+          className='flex  py-4 first:pt-0 last:pb-0'
+          key={todo.id}>
+            <div className='max-w-sm rounded-xl shadow-lg p-5 '>
+            <p className="">{todo.task}</p>
+            </div>
+            <Button
+            variant="outline" className='ml-4 my-3'
+            onClick={() => {
+              setTodoList(todoList.filter(a=> a.id !== todo.id))
+            }}
+            >Delete</Button>
+            </li>
         ))}
       </ul>
     </div>

@@ -1,8 +1,22 @@
+"use client"
 import React from 'react'
-import { FaGithub } from "react-icons/fa";
+//import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useRouter } from 'next/navigation';
 
-const LoginForm = () => {
+/*interface LoginButtonProps{
+  children: React.ReactNode ;
+  mode?: "modal"|"redirect";
+  asChild?:boolean;
+}*/
+
+const LoginForm =() => {
+  const router = useRouter();
+
+  const onClick = () =>{
+    router.push("./admin")
+  }
+  
   return (
     <section className="flex flex-col  h-full items-center mx-auto">
 
@@ -38,7 +52,9 @@ const LoginForm = () => {
           </div>
   
           <button
+          
           type="submit" 
+          onClick={onClick}
           className="w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Log In</button>
         </form>
@@ -53,18 +69,6 @@ const LoginForm = () => {
               Log in
               with
               Google
-              </span>
-          </div>
-        </button>
-  
-        
-        <button type="button" className="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300 mt-3">
-          <div className="flex items-center justify-center">
-            <FaGithub/>
-              <span className="ml-4">
-              Log in
-              with
-              Github
               </span>
           </div>
         </button>
