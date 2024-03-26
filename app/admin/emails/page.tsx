@@ -24,15 +24,14 @@ const EmailsPage = () => {
       console.log(data)
     }
   return (
-    <div className='flex'>
+    <div className=''>
       <div className="w-100 border h-20">
        <div className="flex items-center justify-center pt-5 font-bold">
         <h1 className='text-2xl'>Save files and Send Emails</h1>
         </div>
     </div>
-      <div className=''>
+      
       <FileSection/>
-      </div>
    <section className="ml-5 mr-4  ">
    <div className="w-2/5 float-right bg-slate-100 mr-6 flex items-center ml-7 pb-4">
    <form
@@ -44,7 +43,7 @@ const EmailsPage = () => {
       type='email'
       required
       maxLength={50}
-      placeholder='Enter your email'
+      placeholder='Enter complainant email'
       />
       <textarea
       className='h-52 my-3 border-black p-4 rounded-lg'
